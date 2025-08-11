@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <title>Product List</title>
+</head>
+
+<body>
+  <div class="container border p-3 my-4 rounded shadow">
+    <div class="row">
+      <!-- Kolom Form -->
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+        <div class="m-3 border p-4 rounded shadow">
+          <h3>Product Information</h3>
+          <br>
+          <form action="" id="product-form">
+            <div class="mb-3">
+              <label for="product-name" class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="product-name" placeholder="Enter Product Name"
+                name="product-name" required />
+            </div>
+            <div class="mb-3">
+              <label for="stock-status" class="form-label">Stock Status</label>
+              <select class="form-select" aria-label="Select stock status" name="stock-status" id="stock-status"
+                required>
+                <option value="In Stock"><strong>In Stock</strong></option>
+                <option value="Out of Stock"><strong>Out of Stock</strong></option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="product-price" class="form-label">Price</label>
+              <input type="number" class="form-control" id="product-price" placeholder="Enter Price"
+                name="product-price" required />
+            </div>
+            <div class="mb-3">
+              <label for="product-stock" class="form-label">Description</label>
+              <textarea class="form-control" id="product-stock" placeholder="Enter Description" name="product-stock"
+                required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="product-quantity" class="form-label">Quantity</label>
+              <input type="number" class="form-control" id="product-quantity" placeholder="Enter Quantity"
+                name="product-quantity" required />
+            </div>
+            <div class="mb-3">
+              <label for="product-color" class="form-label">Color</label>
+              <input type="text" class="form-control" id="product-color" placeholder="Enter Color" name="product-color"
+                required />
+            </div>
+            <div class="mb-3">
+              <label for="product-material" class="form-label">Material</label>
+              <input type="text" class="form-control" id="product-material" placeholder="Enter Material"
+                name="product-material" required />
+            </div>
+            <div class="mb-3">
+              <label for="product-brand" class="form-label">Brand</label>
+              <input type="text" class="form-control" id="product-brand" placeholder="Enter Brand" name="product-brand"
+                required />
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary" id="submit-button">
+                SAVE
+              </button>
+              <button type="button" class="btn btn-primary d-none" id="update-button">
+                UPDATE
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Kolom Preview & Product List -->
+      <div class="col-12 col-lg-6">
+        <div class="m-3 border p-4 rounded shadow mb-4">
+          <h3 id="display-product-name">Quality Men's Hoodie for Winter, Men's Fashion Casual Hoodie</h3>
+          <div class="text-center">
+            <img
+              src="https://images.tokopedia.net/img/cache/700/VqbcmM/2024/6/4/eed7fb5f-edaf-4eac-a44c-24c538a4cce9.jpg"
+              alt="Men's Hoodie"
+              class="img-fluid mb-3"
+              style="max-width: 400px; max-height: 400px; width: 100%; height: auto; object-fit: cover;"
+            />
+          </div>
+          <div id="display-stock-status" class="text-success">In stock</div>
+          <p>
+            <span id="display-product-price">Rp. 550,000</span>
+            <small>/per pcs</small>
+          </p>
+          <p id="display-description">
+            Modern look and quality demo item is a streetwear-inspired collection that
+            continues to break away from the conventions of mainstream fashion. Made
+            in Italy, these black and brown clothing low-top shirts for men.
+          </p>
+          <hr />
+          <div class="row">
+            <div class="col-4">
+              <strong>Quantity</strong>
+            </div>
+            <div class="col-8" id="display-quantity">5</div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <strong>Color</strong>
+            </div>
+            <div class="col-8" id="display-color">Brown Ash</div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <strong>Material</strong>
+            </div>
+            <div class="col-8" id="display-material">Cotton, Jeans</div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <strong>Brand</strong>
+            </div>
+            <div class="col-8" id="display-brand">Reebok</div>
+          </div>
+        </div>
+        <div class="m-3 border p-4 rounded shadow" id="product-list"></div>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
